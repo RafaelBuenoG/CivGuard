@@ -41,14 +41,17 @@ ul, ol {
 
 /* Colors */
 :root {
-    --color-primary: #0066db;
+    --color-primary: #1F2D3D;
     --color-secondary: #6c757d;
-    --color-success: #28a745;
+    --color-success: #3E6257;
     --color-danger: #dc3545;
     --color-warning: #ffc107;
     --color-info: #17a2b8;
-    --color-light: #f8f9fa;
-    --color-dark: #343a40;
+    --color-light: #D9D9D9;
+    --color-dark: #302f31;
+}
+.bg-light {
+    background-color: #D9D9D9 !important;
 }
 
 header
@@ -89,6 +92,15 @@ section.slider{
 }
 .slide-box img{
     width: 100%;
+}
+.btn-light{
+    background-color: var(--color-light);
+}
+.btn-dark{
+    background-color: var(--color-dark)
+}
+.division-line{
+    background-color: var(--color-light);
 }
 .nav-manual, .nav-auto{
     position: absolute;
@@ -221,6 +233,7 @@ section.slider{
 
 .card-text
 {
+    color: var(--color-dark);
     font-size: .7rem;
 }
 
@@ -233,6 +246,15 @@ section.slider{
 form
 {
     box-shadow: 0px 0px 40px rgb(167, 167, 167);
+}
+.btn-primary{
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* About */
