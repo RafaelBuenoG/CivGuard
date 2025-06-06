@@ -1,0 +1,281 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* Colors */
+:root {
+    --color-primary: #0066db;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: #17a2b8;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+}
+
+header
+{
+    background-color: var(--color-primary);
+}
+
+.division-line
+{
+    margin: 0 15px;
+    width: 2px;
+    height: 50px;
+    background-color: #e7e7e7;
+}
+
+/* Slider */
+section.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+}
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+.slider-content input, .img-mobile{
+    display: none;
+}
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+.slide-box img{
+    width: 100%;
+}
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 34.3%;
+    display: flex;
+    justify-content: center;
+}
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid var(--color-primary);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+} 
+.nav-manual{
+    z-index: 1;
+}
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+.nav-manual .manual-btn:hover{
+    background-color: var(--color-primary);
+}
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: var(--color-primary);
+}
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: var(--color-primary);
+}
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: var(--color-primary);
+}
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+@media screen and (max-width: 1000px) {
+    .img-desktop{
+        display: none;
+    }
+    .img-mobile{
+        display: block;
+    }
+    .nav-auto, .nav-manual{
+        margin-top: 60%;
+    }
+}
+
+/* Carousel */
+
+.carousel-wrapper {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.carousel-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 1rem;
+    scroll-behavior: smooth;
+    position: relative;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 30%;
+    border: 1px solid #cccccc;
+    height: 10rem;
+    border: 1px solid #ccc;
+    scroll-snap-align: start;
+    background-color: #ffffff1a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.carousel-arrow {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+}
+
+.carousel-arrow.left {
+    left: 4vw;
+}
+
+.carousel-arrow.right {
+    right: 4vw;
+}
+
+.container-nav
+{
+    display: none!important;
+}
+
+.card-title
+{
+    font-size: .7rem;
+}
+
+.card-text
+{
+    font-size: .7rem;
+}
+
+/* Login */
+
+.login-container {
+    max-width: 500px;
+}
+
+form
+{
+    box-shadow: 0px 0px 40px rgb(167, 167, 167);
+}
+
+/* About */
+
+.container-1
+{
+    width: 50%;
+}
+
+.container-3
+{
+    width: 40%;
+}
+
+.teammate > img
+{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.name-teammate
+{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .container-1
+    {
+        width: 100%;
+    }
+
+    .container-2
+    {
+        margin: 0 auto;
+    }
+
+    .container-3
+    {
+        width: 100%;
+    }
+}
