@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>CivGuard</title>
 </head>
-<body class="bg-light h-100 d-flex justify-content-center align-items-center">
-    <header class="position-absolute top-0 w-100 navbar navbar-expand-lg px-5" data-bs-theme="dark">
+<body class="bg-light">
+    <header class="navbar navbar-expand-lg px-5" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand me-5 img-fluid" style="width: 55px;" href="./index.html">
-                    <img src="../img/Img-Logo.png" alt="Logo">
-                </a>
+            <a class="navbar-brand me-5" href="./index.html">
+                <img src="" alt="Logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,48 +43,63 @@
                     <a href="/pages/login.html" class="btn btn-light">Login</a>
                     <a href="/pages/createAccount.html" class="btn btn-dark">Criar conta</a>
                     <div class="division-line"></div>
-                    <a href="/pages/adm.html" class="btn btn-dark">Admin</a>
+                    <a href="/pages/createAccount.html" class="btn btn-dark">Admin</a>
                 </div>
             </nav>
         </div>
     </header>
-    <div class="w-100 mx-auto login-container">
-        <div class="coco">
-            <form class="p-4 rounded-4 needs-validation" name="login" id="login" method="post" action="" novalidate>
-                <h1 class="h3 mb-3">Crie sua conta de Cidadão</h1>
-                <div class="d-flex flex-column gap-3">
-                    <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInput1" placeholder="Digite seu e-mail" maxlength="30" required>
-                        <label for="floatingInput1">E-mail</label>
-                        <div class="invalid-feedback">Por favor, insira um endereço de email corretamente</div>
-                    </div>
-                    <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingInput2" placeholder="Digite sua senha" minlength="8" maxlength="30" required>
-                        <label for="floatingInput2">Senha</label>
-                        <div class="invalid-feedback">A senha deve conter no mínimo 8 caracteres</div>
-                    </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInput3" placeholder="Digite seu telefone" minlength="8" maxlength="30" required>
-                        <label for="floatingInput3">Telefone</label>
-                        <div class="invalid-feedback">Por favor, insira um número de telefone corretamente</div>
-                    </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInput3" placeholder="Digite seu telefone" maxlength="30" required>
-                        <label for="floatingInput3">Cidade</label>
-                        <div class="invalid-feedback">Por favor, digite sua cidade</div>
-                    </div>
+    <main>
+        <section class="container my-5 d-flex gap-5">
+            <h1>Alertas</h1>
+            <button class="btn btn-primary">Adicionar</button>
+        </section>
+        <section class="container">
+            <hr>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="">
+                    <h4 class="text-success">Alerta Leve</h4>
+                    <p class="mb-0">Cidade X</p>
+                    <p class="mb-0">Data: 15/10/2023 | Hora: 14:30</p>
+                    <p class="mb-0">Área Afetada: X km2</p>
                 </div>
-                <div class="form-check text-start my-3">
-                    <input type="checkbox" class="form-check-input" id="Check" required>
-                    <label class="form-check-label" for="Check">Li e aceito os <a class="text-primary" href="#">termos</a></label>
-                    <div class="invalid-feedback">Aceite os termos para prosseguir.</div>
+                <div class="btn-actions d-flex flex-column gap-2">
+                    <button class="btn btn-success">Visualizar</button>
+                    <button class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger">Excluir</button>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 py-2">Criar Conta</button>
-            </form>
-        </div>
-    </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="">
+                    <h4 class="text-warning">Alerta Médio</h4>
+                    <p class="mb-0">Cidade X</p>
+                    <p class="mb-0">Data: 15/10/2023 | Hora: 14:30</p>
+                    <p class="mb-0">Área Afetada: X km2</p>
+                </div>
+                <div class="btn-actions d-flex flex-column gap-2">
+                    <button class="btn btn-success">Visualizar</button>
+                    <button class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger">Excluir</button>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="">
+                    <h4 class="text-danger">Alerta Grave</h4>
+                    <p class="mb-0">Cidade X</p>
+                    <p class="mb-0">Data: 15/10/2023 | Hora: 14:30</p>
+                    <p class="mb-0">Área Afetada: X km2</p>
+                </div>
+                <div class="btn-actions d-flex flex-column gap-2">
+                    <button class="btn btn-success">Visualizar</button>
+                    <button class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger">Excluir</button>
+                </div>
+            </div>
+            <hr>
+        </section>
+    </main>
 
-    <script src="/js/validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>

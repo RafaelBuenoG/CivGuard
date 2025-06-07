@@ -301,3 +301,22 @@ form
         width: 100%;
     }
 }
+
+.example-graph
+{
+    width: 200px;
+    height: 75px;
+    background-color: var(--color-primary);
+}
+
+.map-example
+{
+    width: 40vw;
+    height: 500px;
+    background-color: grey;
+}
+
+.main-simulator
+{
+    width: 90%;
+}
