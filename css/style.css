@@ -236,6 +236,11 @@ section.slider{
     color: var(--color-dark);
     font-size: .7rem;
 }
+.imagem-noticia{
+
+    width: 10%;
+}
+
 
 /* Login */
 
