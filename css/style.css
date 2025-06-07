@@ -236,9 +236,11 @@ section.slider{
     color: var(--color-dark);
     font-size: .7rem;
 }
+
 .imagem-noticia{
 
-    width: 10%;
+    width: 30px;
+    height: 10%;
 }
 
 
@@ -324,4 +326,10 @@ form
 .main-simulator
 {
     width: 90%;
+}
+
+#map
+{
+    width: 40vw;
+    height: 60vh;
 }
